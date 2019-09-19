@@ -242,9 +242,7 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/pc.png"/>
             </Property>
-            <Property name="toolTipText" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-              <Connection component="radioBtnGroupTipoComputador" name="toString" type="method"/>
-            </Property>
+            <Property name="toolTipText" type="java.lang.String" value="Imagem do tipo de computador selecionado"/>
           </Properties>
         </Component>
       </SubComponents>
@@ -483,6 +481,9 @@
         <Property name="text" type="java.lang.String" value="Salvar"/>
         <Property name="toolTipText" type="java.lang.String" value="Salvar pedido"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSalvarActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnCancelar">
       <Properties>
@@ -492,6 +493,9 @@
         <Property name="text" type="java.lang.String" value="Cancelar"/>
         <Property name="toolTipText" type="java.lang.String" value="Cancelar pedido"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCancelarActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

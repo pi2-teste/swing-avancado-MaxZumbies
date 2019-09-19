@@ -5,6 +5,7 @@
  */
 package br.senac.sp.aula5;
 
+import static com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type.Int;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -112,7 +113,7 @@ public class VendaComputadorView extends javax.swing.JFrame {
         });
 
         labelTipoPCImagem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pc.png"))); // NOI18N
-        labelTipoPCImagem.setToolTipText(radioBtnGroupTipoComputador.toString());
+        labelTipoPCImagem.setToolTipText("Imagem do tipo de computador selecionado");
 
         javax.swing.GroupLayout pnlComputadorLayout = new javax.swing.GroupLayout(pnlComputador);
         pnlComputador.setLayout(pnlComputadorLayout);
@@ -264,10 +265,20 @@ public class VendaComputadorView extends javax.swing.JFrame {
         btnSalvar.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         btnSalvar.setText("Salvar");
         btnSalvar.setToolTipText("Salvar pedido");
+        btnSalvar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSalvarActionPerformed(evt);
+            }
+        });
 
         btnCancelar.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         btnCancelar.setText("Cancelar");
         btnCancelar.setToolTipText("Cancelar pedido");
+        btnCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCancelarActionPerformed(evt);
+            }
+        });
 
         jMenuArquivo.setText("Arquivo");
         jMenuArquivo.setToolTipText("Arquivo");
@@ -353,14 +364,17 @@ public class VendaComputadorView extends javax.swing.JFrame {
 
     private void radioBtnPCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radioBtnPCActionPerformed
         this.labelTipoPCImagem.setIcon(new ImageIcon(getClass().getResource("/pc.png")));
+        this.labelTipoPCImagem.setToolTipText(radioBtnPC.getToolTipText());
     }//GEN-LAST:event_radioBtnPCActionPerformed
 
     private void radioBtnNotebookActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radioBtnNotebookActionPerformed
         this.labelTipoPCImagem.setIcon(new ImageIcon(getClass().getResource("/notebook.png")));
+        this.labelTipoPCImagem.setToolTipText(radioBtnNotebook.getToolTipText());
     }//GEN-LAST:event_radioBtnNotebookActionPerformed
 
     private void radioBtnServidorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radioBtnServidorActionPerformed
         this.labelTipoPCImagem.setIcon(new ImageIcon(getClass().getResource("/servidor.png")));
+        this.labelTipoPCImagem.setToolTipText(radioBtnServidor.getToolTipText());
     }//GEN-LAST:event_radioBtnServidorActionPerformed
 
     private void jMenuItemSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemSairActionPerformed
@@ -375,6 +389,18 @@ public class VendaComputadorView extends javax.swing.JFrame {
     private void checkBoxHudUsbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkBoxHudUsbActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_checkBoxHudUsbActionPerformed
+
+    private void btnSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvarActionPerformed
+        Computador pc = new Computador();
+        Integer pcSelecionado = radioBtnGroupTipoComputador.getSelection().hashCode();
+        if(1!=0){
+            System.out.println(pcSelecionado);  
+        }
+    }//GEN-LAST:event_btnSalvarActionPerformed
+
+    private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
+        //VendaComputadorView.DO_NOTHING_ON_CLOSE;
+    }//GEN-LAST:event_btnCancelarActionPerformed
 
     /**
      * @param args the command line arguments
