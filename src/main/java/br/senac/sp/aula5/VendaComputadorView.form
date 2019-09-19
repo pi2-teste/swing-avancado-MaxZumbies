@@ -36,6 +36,7 @@
         <Menu class="javax.swing.JMenu" name="jMenuArquivo">
           <Properties>
             <Property name="text" type="java.lang.String" value="Arquivo"/>
+            <Property name="toolTipText" type="java.lang.String" value="Arquivo"/>
           </Properties>
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItemNovoCliente">
@@ -71,6 +72,7 @@
         <Menu class="javax.swing.JMenu" name="jMenuAjuda">
           <Properties>
             <Property name="text" type="java.lang.String" value="Ajuda"/>
+            <Property name="toolTipText" type="java.lang.String" value="Ajuda"/>
           </Properties>
         </Menu>
       </SubComponents>
@@ -131,9 +133,9 @@
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="btnSalvar" linkSize="3" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="btnCancelar" linkSize="3" alignment="3" min="-2" pref="54" max="-2" attributes="0"/>
+                  <Component id="btnCancelar" linkSize="3" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace max="-2" attributes="0"/>
+              <EmptySpace min="-2" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -148,6 +150,7 @@
             </TitledBorder>
           </Border>
         </Property>
+        <Property name="toolTipText" type="java.lang.String" value="Escolha um tipo de computador"/>
       </Properties>
       <AccessibilityProperties>
         <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="Escolha um tipo de computador"/>
@@ -198,6 +201,7 @@
               <Font name="Dialog" size="14" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="PC"/>
+            <Property name="toolTipText" type="java.lang.String" value="Computador de mesa"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="radioBtnPCActionPerformed"/>
@@ -212,6 +216,7 @@
               <Font name="Dialog" size="14" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Notebook"/>
+            <Property name="toolTipText" type="java.lang.String" value="Notebook"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="radioBtnNotebookActionPerformed"/>
@@ -226,6 +231,7 @@
               <Font name="Dialog" size="14" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Servidor"/>
+            <Property name="toolTipText" type="java.lang.String" value="Servidor"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="radioBtnServidorActionPerformed"/>
@@ -235,6 +241,9 @@
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/pc.png"/>
+            </Property>
+            <Property name="toolTipText" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+              <Connection component="radioBtnGroupTipoComputador" name="toString" type="method"/>
             </Property>
           </Properties>
         </Component>
@@ -249,6 +258,7 @@
             </TitledBorder>
           </Border>
         </Property>
+        <Property name="toolTipText" type="java.lang.String" value="Sistema Operacional"/>
       </Properties>
       <AccessibilityProperties>
         <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="Sistema Operacional"/>
@@ -273,7 +283,7 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
                       <Component id="toggleBtnLinux" max="32767" attributes="0"/>
-                      <Component id="toggleBtnWindows" pref="46" max="32767" attributes="0"/>
+                      <Component id="toggleBtnWindows" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
@@ -290,6 +300,7 @@
               <Font name="Dialog" size="14" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Windows"/>
+            <Property name="toolTipText" type="java.lang.String" value="Sistema Operacional Windows"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="toggleBtnWindowsActionPerformed"/>
@@ -304,6 +315,7 @@
               <Font name="Dialog" size="14" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Linux"/>
+            <Property name="toolTipText" type="java.lang.String" value="Sistema Operacional Linux"/>
           </Properties>
         </Component>
       </SubComponents>
@@ -317,6 +329,7 @@
             </TitledBorder>
           </Border>
         </Property>
+        <Property name="toolTipText" type="java.lang.String" value="Escolha o tipo e capacidade do HD"/>
       </Properties>
       <AccessibilityProperties>
         <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="Escolha o tipo e capacidade do HD"/>
@@ -352,6 +365,7 @@
                 <StringItem index="2" value="SSD 1TB"/>
               </StringArray>
             </Property>
+            <Property name="toolTipText" type="java.lang.String" value="Escolha a capacidade do HD"/>
           </Properties>
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
@@ -368,6 +382,7 @@
             </TitledBorder>
           </Border>
         </Property>
+        <Property name="toolTipText" type="java.lang.String" value="Acess&#xf3;rios e Servi&#xe7;os"/>
         <Property name="alignmentX" type="float" value="0.1"/>
       </Properties>
       <AccessibilityProperties>
@@ -414,11 +429,13 @@
         <Component class="javax.swing.JCheckBox" name="checkBoxMousePad">
           <Properties>
             <Property name="text" type="java.lang.String" value="MousePad"/>
+            <Property name="toolTipText" type="java.lang.String" value="MousePad"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JCheckBox" name="checkBoxHudUsb">
           <Properties>
             <Property name="text" type="java.lang.String" value="HUD USB"/>
+            <Property name="toolTipText" type="java.lang.String" value="HUD USB"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="checkBoxHudUsbActionPerformed"/>
@@ -427,6 +444,7 @@
         <Component class="javax.swing.JCheckBox" name="checkBoxMochila">
           <Properties>
             <Property name="text" type="java.lang.String" value="Mochila"/>
+            <Property name="toolTipText" type="java.lang.String" value="Mochila"/>
           </Properties>
         </Component>
         <Container class="javax.swing.JScrollPane" name="jScrollPane2">
@@ -447,6 +465,7 @@
                     <StringItem index="4" value="Seguro anti-furto"/>
                   </StringArray>
                 </Property>
+                <Property name="toolTipText" type="java.lang.String" value="Escolha quantos itens quiser (Segure shift ou ctrl para selecionar mais de um)"/>
               </Properties>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
@@ -462,6 +481,7 @@
           <Font name="Dialog" size="14" style="0"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Salvar"/>
+        <Property name="toolTipText" type="java.lang.String" value="Salvar pedido"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="btnCancelar">
@@ -470,6 +490,7 @@
           <Font name="Dialog" size="14" style="0"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Cancelar"/>
+        <Property name="toolTipText" type="java.lang.String" value="Cancelar pedido"/>
       </Properties>
     </Component>
   </SubComponents>

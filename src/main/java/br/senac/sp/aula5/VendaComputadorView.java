@@ -79,10 +79,12 @@ public class VendaComputadorView extends javax.swing.JFrame {
         setTitle("Compra Personalizada");
 
         pnlComputador.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Escolha um tipo de computador", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 14))); // NOI18N
+        pnlComputador.setToolTipText("Escolha um tipo de computador");
 
         radioBtnGroupTipoComputador.add(radioBtnPC);
         radioBtnPC.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         radioBtnPC.setText("PC");
+        radioBtnPC.setToolTipText("Computador de mesa");
         radioBtnPC.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 radioBtnPCActionPerformed(evt);
@@ -92,6 +94,7 @@ public class VendaComputadorView extends javax.swing.JFrame {
         radioBtnGroupTipoComputador.add(radioBtnNotebook);
         radioBtnNotebook.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         radioBtnNotebook.setText("Notebook");
+        radioBtnNotebook.setToolTipText("Notebook");
         radioBtnNotebook.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 radioBtnNotebookActionPerformed(evt);
@@ -101,6 +104,7 @@ public class VendaComputadorView extends javax.swing.JFrame {
         radioBtnGroupTipoComputador.add(radioBtnServidor);
         radioBtnServidor.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         radioBtnServidor.setText("Servidor");
+        radioBtnServidor.setToolTipText("Servidor");
         radioBtnServidor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 radioBtnServidorActionPerformed(evt);
@@ -108,6 +112,7 @@ public class VendaComputadorView extends javax.swing.JFrame {
         });
 
         labelTipoPCImagem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pc.png"))); // NOI18N
+        labelTipoPCImagem.setToolTipText(radioBtnGroupTipoComputador.toString());
 
         javax.swing.GroupLayout pnlComputadorLayout = new javax.swing.GroupLayout(pnlComputador);
         pnlComputador.setLayout(pnlComputadorLayout);
@@ -140,10 +145,12 @@ public class VendaComputadorView extends javax.swing.JFrame {
         );
 
         pnlSO.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Sistema Operacional", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 14))); // NOI18N
+        pnlSO.setToolTipText("Sistema Operacional");
 
         toggleBtnGroupSistemaOperacional.add(toggleBtnWindows);
         toggleBtnWindows.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         toggleBtnWindows.setText("Windows");
+        toggleBtnWindows.setToolTipText("Sistema Operacional Windows");
         toggleBtnWindows.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 toggleBtnWindowsActionPerformed(evt);
@@ -153,6 +160,7 @@ public class VendaComputadorView extends javax.swing.JFrame {
         toggleBtnGroupSistemaOperacional.add(toggleBtnLinux);
         toggleBtnLinux.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         toggleBtnLinux.setText("Linux");
+        toggleBtnLinux.setToolTipText("Sistema Operacional Linux");
 
         javax.swing.GroupLayout pnlSOLayout = new javax.swing.GroupLayout(pnlSO);
         pnlSO.setLayout(pnlSOLayout);
@@ -171,13 +179,15 @@ public class VendaComputadorView extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(pnlSOLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(toggleBtnLinux, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(toggleBtnWindows, javax.swing.GroupLayout.DEFAULT_SIZE, 46, Short.MAX_VALUE))
+                    .addComponent(toggleBtnWindows, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pnlHD.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Escolha o tipo e capacidade do HD", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 14))); // NOI18N
+        pnlHD.setToolTipText("Escolha o tipo e capacidade do HD");
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "HDD 1TB", "SSD 256 GB", "SSD 1TB" }));
+        jComboBox1.setToolTipText("Escolha a capacidade do HD");
 
         javax.swing.GroupLayout pnlHDLayout = new javax.swing.GroupLayout(pnlHD);
         pnlHD.setLayout(pnlHDLayout);
@@ -197,11 +207,14 @@ public class VendaComputadorView extends javax.swing.JFrame {
         );
 
         pnlAcessorios.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Acessórios e Serviços", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 14))); // NOI18N
+        pnlAcessorios.setToolTipText("Acessórios e Serviços");
         pnlAcessorios.setAlignmentX(0.1F);
 
         checkBoxMousePad.setText("MousePad");
+        checkBoxMousePad.setToolTipText("MousePad");
 
         checkBoxHudUsb.setText("HUD USB");
+        checkBoxHudUsb.setToolTipText("HUD USB");
         checkBoxHudUsb.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 checkBoxHudUsbActionPerformed(evt);
@@ -209,12 +222,14 @@ public class VendaComputadorView extends javax.swing.JFrame {
         });
 
         checkBoxMochila.setText("Mochila");
+        checkBoxMochila.setToolTipText("Mochila");
 
         jList2.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Garantia Extendida", "Suporte no Local", "Instalação do SO", "Suporte Online 24 horas", "Seguro anti-furto" };
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
         });
+        jList2.setToolTipText("Escolha quantos itens quiser (Segure shift ou ctrl para selecionar mais de um)");
         jScrollPane2.setViewportView(jList2);
 
         javax.swing.GroupLayout pnlAcessoriosLayout = new javax.swing.GroupLayout(pnlAcessorios);
@@ -248,11 +263,14 @@ public class VendaComputadorView extends javax.swing.JFrame {
 
         btnSalvar.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         btnSalvar.setText("Salvar");
+        btnSalvar.setToolTipText("Salvar pedido");
 
         btnCancelar.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         btnCancelar.setText("Cancelar");
+        btnCancelar.setToolTipText("Cancelar pedido");
 
         jMenuArquivo.setText("Arquivo");
+        jMenuArquivo.setToolTipText("Arquivo");
 
         jMenuItemNovoCliente.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_N, java.awt.event.InputEvent.CTRL_MASK));
         jMenuItemNovoCliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/novo.png"))); // NOI18N
@@ -277,6 +295,7 @@ public class VendaComputadorView extends javax.swing.JFrame {
         jMenuBar1.add(jMenuArquivo);
 
         jMenuAjuda.setText("Ajuda");
+        jMenuAjuda.setToolTipText("Ajuda");
         jMenuBar1.add(jMenuAjuda);
 
         setJMenuBar(jMenuBar1);
@@ -312,7 +331,7 @@ public class VendaComputadorView extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnSalvar)
-                    .addComponent(btnCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnCancelar))
                 .addContainerGap())
         );
 
